@@ -1,0 +1,9 @@
+[submodule "romdisk"]
+	path = romdisk
+	url = https://github.com/dmadole/MiniROM-romdisk
+[submodule "utility"]
+	path = utility
+	url = https://github.com/dmadole/MiniROM-utility
+[submodule "mbios"]
+	path = mbios
+	url = https://github.com/dmadole/MiniROM-mbios
