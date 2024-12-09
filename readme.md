@@ -14,6 +14,6 @@ git submodule update --init --recursive
 ```
 Once you have the package and submodules, to build the ROM image:
 ```
-make mini
+make
 ```
 Note that commits of the image package are linked to specific commits of submodules, so even as the submodule repositories are updated, a pull of a specific image commit (or tag) will always build the same set of components. In this way, ROM firmware can have it's own specific consistent releases even as the individual components are moving targets.
