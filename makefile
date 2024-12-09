@@ -6,10 +6,10 @@ mini superelf rc1802: mbios/mbios.asm utility/utility.asm romdisk/files
 	$(MAKE) -C mbios $@
 	$(MAKE) -C utility $@
 	$(MAKE) -C romdisk
-	printf '\xc0\xeb\x00' > rom-$@.img
+	printf '\xc0\xe8\x00' > rom-$@.img
 	cat romdisk/romdisk.img >> rom-$@.img
-	truncate -s 27392 rom-$@.img
-	cat utility/utility.bin >> rom-$@.img
+	truncate -s 26624 rom-$@.img
+	cat utility/utility.img >> rom-$@.img
 	truncate -s 28672 rom-$@.img
 	head -c -4 mbios/mbios.bin >> rom-$@.img
 	bash tools/checksum.sh rom-$@.img >> rom-$@.img
