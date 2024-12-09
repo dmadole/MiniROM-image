@@ -26,4 +26,6 @@ Once you have the package and submodules, and zx1, to build the ROM image:
 cd MiniROM-image
 make mini
 ```
+The process of building the ROM disk image changes the timestamps on the directories within the image, so repeated builds of the ROM disk will result in slightly different disk images, which will give different checksums on the ROM image. I may adjust the process in the future to make the process exactly repeatable. In the interim, expect your build to have a different checksum than mine.
+
 Note that commits of the image package are linked to specific commits of submodules, so even as the submodule repositories are updated, a pull of a specific image commit (or tag) will always build the same set of components. In this way, ROM firmware can have it's own specific consistent releases even as the individual components are moving targets.
